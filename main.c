@@ -39,7 +39,7 @@ typedef struct {
 
 void Menu(){
     do {
-        printf("\n     === MENU ===\n\n");
+        printf("\n     === MENU PRINCIPAL ===\n\n");
         printf("   1. Gestion des Voitures\n");
         printf("   2. Gestion des Clients\n");
         printf("   3. Gestion des Locations\n");
@@ -68,7 +68,19 @@ void GestionLocations(){
     printf("\nFonction de Gestion des Locations\n");
 }
 void Quitter(){
-    printf("\nQuitter le Programme\n");
+    printf("\n     ===Quitter le Programme===\n");
+    printf("Voulez-vous vraiment quitter le programme ?\nSi oui appuyer sur 1 ou 'y'\nSi non appuyer sur autre caractère\n");
+    printf("\nEntrez votre reponse : ");
+    char ch;
+    ch = getchar();
+    if (ch == '1' || ch == 'y'){
+        return;
+    }else{
+        printf("\nRetour au Menu Principal\n");
+        Menu();
+        
+    }
+    
 }
 
 
