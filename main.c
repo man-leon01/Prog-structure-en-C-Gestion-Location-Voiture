@@ -74,7 +74,7 @@ void Quitter(){
     char ch;
     ch = getchar();
     if (ch == '1' || ch == 'y'){
-        return;
+        return 0;
     }else{
         printf("\nRetour au Menu Principal\n");
         Menu();
