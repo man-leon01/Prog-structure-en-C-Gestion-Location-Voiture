@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
+#include <locale.h>
+#include <string.h>
 
 // Variables Globales
 int choix;
@@ -46,6 +49,7 @@ void Menu(){
         printf("   4. QUITTER\n");
         printf("                               choix : ");
         scanf("%d", &choix);
+        while ((choix = getchar()) != '\n' && choix != EOF);
 
         switch (choix) {
             case 1: GestionVoitures(); break;
@@ -87,7 +91,8 @@ void Quitter(){
 
 int main()
 {
-    printf("\n  ===EPL-LOCATIONS-CAR===\n");
+    setlocale(LC_ALL,"");
+    printf("\n  ===EPL---LOCATIONS--CAR===\n");
     Menu();
     return 0;
 }
